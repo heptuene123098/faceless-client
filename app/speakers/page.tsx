@@ -4,9 +4,14 @@ import { speakers } from "@/lib/data";
 
 export default function Speakers() {
   return (
-    <section className="bg-white mt-32 w-full min-h-screen">
+     <div className="relative bg-gradient-to-tr min-h-screen max-h-auto from-black from-50% to-[#662D91] px-2">
+      <div className="absolute bg-[url('/images/bg-img.jpeg')] bg-cover bg-center bg-no-repeat bg-blend-overlay inset-0 opacity-20"></div>
+      <main className="flex items-center gap-8 flex-col py-8 pt-[5rem] max-phoneL:gap-4">
+         <h2 className="text-3xl tablet:text-5xl laptop:mt-5 font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+          Speakers
+        </h2>
       <div className="mx-auto px-8 lg:px-16 py-6">
-        <div className="w-full flex items-center rounded-2xl border-2 border-gray-300 bg-white px-16 py-2 shadow-sm focus-within:border-purple-500">
+        <div className="w-full flex perspective-1000 animate-float cursor-pointer items-center rounded-2xl border-2 border-gray-300 bg-white px-16 py-2 shadow-sm focus-within:border-purple-500">
           <input
             type="search"
             placeholder="Search by name or niche..."
@@ -16,11 +21,11 @@ export default function Speakers() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-8 lg:px-16 mb-10 gap-8 justify-items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-8 perspective-1000 animate-float cursor-pointer lg:px-16 mb-10 gap-8 justify-items-center">
         {speakers.map((speaker, index) => (
           <div
             key={index}
-            className="bg-[#F1F1F1] rounded-2xl w-full max-w-sm p-6 flex flex-col gap-4 shadow-sm"
+            className="bg-[#F1F1F1] rounded-2xl transform hover:scale-105 transition-transform duration-300 w-full max-w-sm p-6 flex flex-col gap-4 shadow-sm"
           >
             <div>
               <Image
@@ -83,9 +88,7 @@ export default function Speakers() {
           </div>
         ))}
       </div>
-      <button className="rounded-full flex mx-auto items-center justify-center mb-40 text-[#662D91] p-2 w-40 h-10 bg-[#F0EAF4]">
-        See all
-      </button>
-    </section>
+    </main>
+    </div>
   );
 }

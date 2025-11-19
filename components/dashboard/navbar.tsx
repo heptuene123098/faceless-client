@@ -2,7 +2,8 @@
 import Image from "next/image";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { FaEquals, FaTimes } from "react-icons/fa";
+import { FiAlignCenter } from "react-icons/fi";
+import { FaTimes } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import type { Variants } from "framer-motion";
 import { useAuth } from "@/contexts/AuthContext";
@@ -123,7 +124,7 @@ export default function Navbar() {
           {isOpen ? (
             <FaTimes className="w-3 md:w-4 h-3 md:h-4 text-[#130022]" />
           ) : (
-            <FaEquals className="w-3 md:w-4 h-3 md:h-4" />
+            <FiAlignCenter className="w-3 md:w-4 h-3 md:h-4" />
           )}
         </button>
       </nav>

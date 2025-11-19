@@ -1,4 +1,3 @@
-// components/dashboard/about.tsx
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -17,12 +16,12 @@ export default function About() {
         initial={{ x: -50, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="z-10 flex-1 flex flex-col items-start space-y-6 max-w-xl"
+        className="z-10 flex-1 flex flex-col items-center laptop:items-start space-y-6 max-w-xl"
       >
         <h2 className="text-3xl tablet:text-5xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
           About Us
         </h2>
-        <p className="text-base tablet:text-lg leading-relaxed text-gray-300">
+        <p className="text-base tablet:text-lg perspective-1000 animate-float cursor-pointer  leading-relaxed text-gray-300">
           We are building a <span className="text-purple-400">faceless future </span> 
           where innovation thrives without boundaries.  
           Our platform connects pioneers in <span className="text-blue-400">AEC </span> 
@@ -39,7 +38,7 @@ export default function About() {
         initial={{ x: 50, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 2 }}
-        className="z-10 flex-1 flex justify-center mt-10 laptop:mt-0"
+        className="z-10 flex-1 flex justify-center perspective-1000 animate-float cursor-pointer mt-10 laptop:mt-0"
       >
         <Image
           src="/images/futuristic-about.jpg"
