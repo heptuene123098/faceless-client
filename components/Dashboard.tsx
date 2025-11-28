@@ -11,7 +11,7 @@ export default function Dashboard() {
         <div className="w-full space-y-5">
           <div className="border border-[#662D91] flex max-sm:flex-col justify-between items-center px-5 py-7 rounded-2xl bg-[url('/svgs/faceless-skeleton.svg')] bg-no-repeat">
             <div className="md:w-1/2 space-y-5">
-              <h1 className="text-3xl">Hi Emverse!</h1>
+              <h1 className="text-3xl">Hi Gem!</h1>
               <p>
                 Facecan is hosting an event on the 3rd of October don’t miss out
                 – register NOW
