@@ -64,7 +64,7 @@ export default function WebinarCard({
         >
           Register
         </Button>
-        <p className="mr-4 text-gray-500">{price}</p>
+        <p className="text-center md:mr-15 text-gray-500">{price}</p>
       </div>
     </div>
   );

@@ -3,12 +3,14 @@
 import { useForm } from "react-hook-form";
 import Button from "./Button";
 import InputField from "./InputField";
+import { useRouter } from "next/navigation";
 
 interface LoginFormValues {
   email: string;
 }
 
 export default function LoginForm() {
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -21,7 +23,7 @@ export default function LoginForm() {
 
   const onSubmit = (data: LoginFormValues) => {
     console.log("Login submitted:", data);
-    // Handle login logic here
+    router.push('/dashboard')
   };
 
   return (

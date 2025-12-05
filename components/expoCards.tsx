@@ -1,6 +1,7 @@
 "use client";
 import { FaGift, IoSparklesOutline, CiStar } from "../components/icons/icons";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 interface ExpoCardProps {
   title: string;
@@ -13,7 +14,8 @@ interface ExpoCardProps {
 const ExpoCards = ({ title, img, speaker, price, style }: ExpoCardProps) => {
   const [isFlipped, setIsFlipped] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
-  
+  const router = useRouter();
+
   const formattedPrice = parseInt(
     String(price).replace(/[^0-9]/g, "")
   ).toLocaleString("en-NG", {
@@ -98,7 +100,13 @@ const ExpoCards = ({ title, img, speaker, price, style }: ExpoCardProps) => {
           </ul>
 
           <div className="mt-auto">
-            <button className="group bg-[#D49BFFFC] text-[#2B113C] px-6 py-2 rounded-full font-semibold transform hover:scale-105 transition-all duration-300 hover:shadow-[0_0_20px_rgba(212,155,255,0.4)]">
+            <button
+              onClick={(e) => {
+                e.stopPropagation(); // prevent the card from flipping when clicking button
+                router.push("/expo/purchase");
+              }}
+              className="group bg-[#D49BFFFC] text-[#2B113C] px-6 py-2 rounded-full font-semibold transform hover:scale-105 transition-all duration-300 hover:shadow-[0_0_20px_rgba(212,155,255,0.4)]"
+            >
               <span className="flex items-center gap-2">
                 <FaGift className="w-5 h-5" />
                 <span>Invest {formattedPrice}</span>

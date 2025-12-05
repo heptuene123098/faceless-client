@@ -30,22 +30,22 @@ const navItems: NavItemType[] = [
   },
   {
     name: "My webinars",
-    href: "/my-webinars",
+    href: "/dashboard/webinars",
     icon: FacelessIcon,
   },
   {
     name: "Discover",
-    href: "/discover",
+    href: "/dashboard/discover",
     icon: Search,
   },
   {
     name: "Expo Page",
-    href: "/expo",
+    href: "/dashboard/expoPage",
     icon: ShoppingCart,
   },
   {
     name: "Settings",
-    href: "/settings",
+    href: "/dashboard/settings",
     icon: Settings,
   },
 ];
@@ -82,7 +82,7 @@ export default function SideBar() {
                 href={href}
                 className={cn(
                   "flex items-center space-x-3 px-4 py-2 rounded-md transition",
-                  pathname.includes(href)
+                   pathname === href
                     ? "bg-[#F0EAF4] text-[#662D91] font-semibold rounded-full"
                     : "hover:bg-[#662D91] rounded-full hover:text-gray-50 text-gray-600"
                 )}
