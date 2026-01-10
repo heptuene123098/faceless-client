@@ -2,6 +2,7 @@
 import { FaGift, IoSparklesOutline, CiStar } from "../components/icons/icons";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 interface ExpoCardProps {
   title: string;
@@ -46,10 +47,14 @@ const ExpoCards = ({ title, img, speaker, price, style }: ExpoCardProps) => {
           </div>
 
           <div className="z-10 w-full h-[25vh] overflow-hidden rounded-lg max-tablet:h-[20vh] max-phoneP:h-[18vh]">
-            <img
+            <Image
               src={img}
               alt="Course preview"
+              width={400}
+              height={200}
               className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+              placeholder="blur"
+              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
             />
           </div>
 
@@ -78,7 +83,7 @@ const ExpoCards = ({ title, img, speaker, price, style }: ExpoCardProps) => {
         {/* Back of card */}
         <div className="absolute inset-0 card-gradient border border-[#D49BFFFC] rounded-xl p-6 flex flex-col items-center justify-center backface-hidden rotate-y-180">
           <h3 className="gradient-text text-xl font-bold mb-4">
-            {"What's"} Included
+            What&apos;s Included
           </h3>
           <ul className="text-sm space-y-3 text-white/90 mb-6">
             <li className="flex items-center gap-2">

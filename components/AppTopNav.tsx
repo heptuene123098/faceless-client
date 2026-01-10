@@ -103,7 +103,7 @@ export default function AppTopNav() {
                 />
               </div>
               <p className="text-gray-950 text-sm hidden md:block font-medium">
-                Emverse
+                Gem
               </p>
             </button>
             {accountOpen && <AccountDropDown />}
