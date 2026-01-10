@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Discover() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#F1F1F1] p-6">
@@ -17,17 +19,16 @@ export default function Discover() {
         
         {/* Subtitle */}
         <p className="text-gray-600">
-          We're working hard to bring exciting new features to the Discover section.
+          We are working hard to bring exciting new features to the Discover section.
           Please check back soon!
         </p>
 
         {/* Button */}
-        <a
-          href="/"
+        <Link href={"/"}
           className="inline-block px-6 py-3 bg-[#662D91] text-white rounded-xl hover:bg-[#571f7b] transition"
         >
           Go Back Home
-        </a>
+        </Link>
       </div>
     </div>
   );

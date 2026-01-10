@@ -10,7 +10,7 @@ interface WebinarCardProps {
   description: string;
   date: string;
   time: string;
-  price: number;
+  price: string | number;
   image: string;
   status?: string;
 }

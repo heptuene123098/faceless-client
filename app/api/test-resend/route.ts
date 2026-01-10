@@ -1,8 +1,8 @@
 import { NextResponse } from 'next/server';
-import { Resend } from 'resend';
+// import { Resend } from 'resend';
 
 export async function GET() {
-  const resend = new Resend(process.env.RESEND_API_KEY);
+  // const resend = new Resend(process.env.RESEND_API_KEY);
   
   return NextResponse.json({
     hasResendKey: !!process.env.RESEND_API_KEY,

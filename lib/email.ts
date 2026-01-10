@@ -18,7 +18,7 @@ export async function sendLoginLink(email: string, token: string) {
     console.log('✅ Email sent to:', email);
     return true;
   } catch (error) {
-    console.error('❌ Email failed, use this URL:', loginUrl);
+    console.error('❌ Email failed, use this URL:', loginUrl,error);
     return false;
   }
 }

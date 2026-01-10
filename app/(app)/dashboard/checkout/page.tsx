@@ -1,13 +1,20 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 
 export default function CheckoutPage() {
+  return (
+    <Suspense fallback={<p>Loading...</p>}>
+      <CheckoutContent />
+    </Suspense>
+  );
+}
+
+function CheckoutContent() {
   const params = useSearchParams();
   const amount = params.get("amount");
   const title = params.get("title");
-  const description = params.get("description");
-  const date = params.get("date")
 
   const handlePayment = async () => {
     const res = await fetch("/api/create-checkout-session", {
