@@ -10,7 +10,7 @@ interface WebinarCardProps {
   description: string;
   date: string;
   time: string;
-  price: string | number;
+  price: number;
   image: string;
   status?: string;
 }
@@ -60,11 +60,19 @@ export default function WebinarCard({
         <Button
           variant="outline"
           className="px-10"
-          onClick={() => router.push("/dashboard/register")}
+          onClick={() => {
+            if (price === 0) {
+              router.push("/dashboard/register");
+            } else {
+              router.push(`/dashboard/checkout?amount=${price}&title=${title}`);
+            }
+          }}
         >
-          Register
+          <p className="text-center text-gray-500">
+            {price === 0 ? "Free" : `Pay & Register`}
+          </p>
         </Button>
-        <p className="text-center md:mr-15 text-gray-500">{price}</p>
+        <p className="text-center md:mr-15 text-gray-500">${price}</p>
       </div>
     </div>
   );
