@@ -12,7 +12,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
     "/sign-up",
     "/my-webinars",
     "/discover",
-    "/expo",
+    "/expoPage",
     "/settings",
   ];
 

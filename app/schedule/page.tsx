@@ -31,7 +31,7 @@ const SchedulePage = () => {
               <h2 className="text-xl md:text-2xl font-bold text-[#D49BFFFC]">
                 Lunch Break
               </h2>
-              <span className="text-lg md:text-xl font-semibold">
+              <span className="text-lg md:text-xl text-white font-semibold">
                 12:30 PM - 1:30 PM
               </span>
             </div>

@@ -75,7 +75,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="bg-[#F3E2FF33] flex flex-col md:flex-row items-center justify-between mt-20 rounded-full px-10 py-4">
-        <span className="text-sm">© 2025 FacelessCon. All rights reserved.</span>
+        <span className="text-sm">© 2026 FacelessCon. All rights reserved.</span>
         <div className="flex items-center gap-4 mt-4 md:mt-0">
           {socialLinks.map((link, i) => (
             <a
